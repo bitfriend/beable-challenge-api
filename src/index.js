@@ -21,7 +21,7 @@ server.route({
       schema: Joi.array().items(Joi.object({
         id: Joi.number().integer().required(),
         name: Joi.string().required(),
-        credits: Joi.number().integer().required()
+        scores: Joi.number().integer().required()
       })),
       failAction: async (request, h, err) => {
         throw Boom.badData(err.message);
