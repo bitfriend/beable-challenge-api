@@ -21,7 +21,7 @@ server.route({
       schema: Joi.array().items(Joi.object({
         id: Joi.number().integer().required(),
         name: Joi.string().required(),
-        scores: Joi.number().integer().required()
+        score: Joi.number().integer().required()
       })),
       failAction: async (request, h, err) => {
         throw Boom.badData(err.message);
@@ -29,7 +29,7 @@ server.route({
     }
   },
   handler: async (request, h) => {
-    const res = await execQuery(request.app.db, "SELECT * FROM grades");
+    const res = await execQuery(request.app.db, "SELECT * FROM grades LIMIT 0, 5");
     return res;
   }
 });

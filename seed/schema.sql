@@ -5,5 +5,5 @@ USE `beable`;
 CREATE TABLE IF NOT EXISTS `grades` (
   `id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `name` VARCHAR(64) NOT NULL,
-  `scores` INT NOT NULL
+  `score` INT NOT NULL
 ) ENGINE=InnoDB;

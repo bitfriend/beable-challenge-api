@@ -15,8 +15,8 @@ const db = MySQL.createConnection({
 async function run() {
   for (let i = 0; i < 5; i++) {
     const name = faker.name.findName();
-    const scores = faker.datatype.number({ min: 5, max: 10 });
-    const res = await execQuery(db, `INSERT INTO grades (name, scores) VALUES ("${name}", ${scores})`);
+    const score = faker.datatype.number({ min: 5, max: 10 });
+    const res = await execQuery(db, `INSERT INTO grades (name, score) VALUES ("${name}", ${score})`);
     console.log(res);
   }
   process.exit(1);
