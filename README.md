@@ -6,6 +6,11 @@ This project uses Hapi.js and MySQL database.
 
 Please import the `./seed/schema.sql` file to create your database.
 
+## Preparing dotenv
+
+Please clone the `./.env.template` file to `./.env`.\
+And open it and make sure if all environment variables are correct.
+
 ## Available Scripts
 
 In the project directory, you can run:
